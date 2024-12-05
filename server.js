@@ -38,7 +38,7 @@ const server = createServer(app);
 initializeWebSocket(server);
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    origin: ['http://localhost:5173', 'http://localhost:3000','https://storied-horse-fddc38.netlify.app','https://storied-horse-fddc38.netlify.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     credentials: true
 }));
