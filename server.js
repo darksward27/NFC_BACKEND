@@ -38,9 +38,11 @@ const server = createServer(app);
 initializeWebSocket(server);
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    origin: ['http://localhost:5173', 'http://localhost:3000','https://starlit-crostata-1b5ec3.netlify.app',
+    'https://starlit-crostata-1b5ec3.netlify.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization','X-Requested-With', 'Accept']
 }));
 
 app.use(express.json());
